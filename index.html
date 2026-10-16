@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proforrox | Maletas y Cases Profesionales para DJs</title>
+    <meta name="description" content="Maletas rígidas a la medida para equipos de audio y DJ. Máxima protección, entrega inmediata o personalización a medida.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Configuración personalizada de colores -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        proDark: '#000000',
+                        proGray: '#111111',
+                        proYellow: '#f6b238',
+                        proDanger: '#ff4444',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- CSS adicional -->
+    <style>
+        body {
+            background-color: #000000;
+            color: #ffffff;
+        }
+        .yellow-box {
+            box-shadow: 0 0 15px rgba(246, 178, 56, 0.15);
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+        .yellow-box:hover {
+            box-shadow: 0 0 25px rgba(246, 178, 56, 0.4);
+            transform: translateY(-5px);
+        }
+        .bg-hero-pattern {
+            background-image: radial-gradient(#1a1a1a 1px, transparent 1px);
+            background-size: 20px 20px;
+            background-color: #000000;
+        }
+        .glassmorphism {
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(246, 178, 56, 0.2);
+        }
+        
+        /* Modales */
+        .modal {
+            display: none;
+        }
+        .modal.active {
+            display: flex;
+        }
+    </style>
+</head>
+<body class="antialiased font-sans flex flex-col min-h-screen relative">
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <nav class="fixed w-full z-50 glassmorphism transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-3xl font-extrabold tracking-tighter text-white uppercase">
+                        PRO<span class="text-proYellow">FORROX</span>
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#opciones" class="hover:text-proYellow transition-colors px-3 py-2 text-sm font-medium">Comprar</a>
+                        <a href="#beneficios" class="hover:text-proYellow transition-colors px-3 py-2 text-sm font-medium">Beneficios</a>
+                        <a href="#envios" class="hover:text-proYellow transition-colors px-3 py-2 text-sm font-medium">Envíos y Pagos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. HEADER / HERO SECTION -->
+    <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-hero-pattern">
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-proYellow opacity-5 rounded-full blur-3xl pointer-events-none"></div>
+        
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center">
+            <!-- Textos -->
+            <div class="text-center lg:text-left lg:w-1/2 lg:pr-10 z-10">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
+                    Tu equipo es tu inversión más grande; <br>
+                    <span class="text-proYellow">dale el blindaje profesional que merece</span>
+                </h1>
+                <p class="mt-4 max-w-2xl text-lg sm:text-xl text-gray-300 mb-10 mx-auto lg:mx-0">
+                    Llega al evento como un profesional. Dale la protección que merece antes de que sea tarde.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+                    <a href="#opciones" class="bg-proYellow text-proDark px-8 py-4 rounded-full font-bold text-lg hover:bg-white transition-all duration-300 shadow-[0_0_15px_rgba(246,178,56,0.4)] transform hover:scale-105 text-center">
+                        Ver Opciones de Maletas
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Imagen Hero -->
+            <div class="mt-16 lg:mt-0 lg:w-1/2 relative z-10 flex justify-center">
+                <div class="relative rounded-2xl overflow-hidden yellow-box group border border-proYellow/30 max-w-md w-full bg-white">
+                    <img src="portada.png" alt="Maleta Proforrox protegiendo controlador" class="w-full object-contain transform transition-transform duration-700 group-hover:scale-105">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 1.5. SECCIÓN DE DOLOR / INTERÉS (NUEVA) -->
+    <section class="py-16 bg-[#0a0a0a] border-t border-gray-800 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-extrabold text-white sm:text-4xl mb-6 leading-tight">
+                    Un golpe accidental puede arruinar tu noche... <span class="text-proDanger">y tu inversión.</span>
+                </h2>
+                <p class="text-gray-400 text-lg">
+                    Sabemos lo que cuesta armar tu setup. Transportar tu controlador en morrales improvisados expone los faders, pantallas y perillas a daños irreversibles en el trayecto. ¿Vale la pena el riesgo?
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Problema 1 -->
+                <div class="bg-proGray p-8 rounded-2xl border border-gray-800 text-center hover:border-proDanger transition-colors duration-300">
+                    <div class="w-16 h-16 bg-red-900/30 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fa-solid fa-car-burst text-2xl text-proDanger"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Impactos en Transporte</h3>
+                    <p class="text-sm text-gray-400">
+                        Baúles de carros o frenadas bruscas. Un impacto lateral sin protección adecuada quiebra los potenciómetros al instante.
+                    </p>
+                </div>
+                
+                <!-- Problema 2 -->
+                <div class="bg-proGray p-8 rounded-2xl border border-gray-800 text-center hover:border-proDanger transition-colors duration-300">
+                    <div class="w-16 h-16 bg-red-900/30 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fa-solid fa-cloud-showers-heavy text-2xl text-proDanger"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Clima Impredecible</h3>
+                    <p class="text-sm text-gray-400">
+                        La humedad y la lluvia repentina de camino al evento son los peores enemigos de los circuitos de tu equipo.
+                    </p>
+                </div>
+                
+                <!-- Problema 3 -->
+                <div class="bg-proGray p-8 rounded-2xl border border-gray-800 text-center hover:border-proDanger transition-colors duration-300">
+                    <div class="w-16 h-16 bg-red-900/30 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fa-solid fa-sliders text-2xl text-proDanger"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Fricción y Desgaste</h3>
+                    <p class="text-sm text-gray-400">
+                        Llevar tu equipo suelto dentro de una maleta genérica hace que los botones y las pantallas se rayen por la fricción constante.
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-16 text-center bg-proDark border border-proYellow/30 p-8 rounded-2xl max-w-4xl mx-auto shadow-[0_0_20px_rgba(246,178,56,0.1)]">
+                <i class="fa-solid fa-shield-halved text-4xl text-proYellow mb-4"></i>
+                <h3 class="text-2xl font-bold text-white mb-2">La Solución Proforrox</h3>
+                <p class="text-gray-300">
+                    Nuestras maletas aíslan tu equipo. La <strong>lona impermeable exterior</strong> bloquea líquidos, mientras la <strong>espuma troquelada a medida</strong> absorbe los impactos y anula el movimiento. <span class="text-proYellow font-semibold">Tranquilidad total desde tu casa hasta la cabina.</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. OPCIONES DE COMPRA -->
+    <section id="opciones" class="py-20 bg-proDark border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-extrabold text-white sm:text-4xl">Elige tu nivel de protección</h2>
+                <div class="mt-2 w-24 h-1 bg-proYellow mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+                
+                <!-- OPCIÓN A: ENTREGA INMEDIATA -->
+                <div class="bg-proGray p-8 rounded-2xl border-2 border-proYellow relative overflow-hidden flex flex-col yellow-box">
+                    <div class="absolute top-0 right-0 bg-proYellow text-proDark text-xs font-bold px-4 py-1 rounded-bl-lg uppercase tracking-wider">
+                        En Stock
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2 text-proYellow">Entrega Inmediata</h3>
+                    <p class="text-white text-lg font-semibold mb-6">Maleta Estándar (73 cm x 49 cm x 13 cm)</p>
+                    
+                    <!-- IMAGEN AÑADIDA: estandar.jpg -->
+                    <div class="mb-6 rounded-lg overflow-hidden border border-gray-700">
+                        <img src="estandar.jpg" alt="Maleta Estándar de Entrega Inmediata" class="w-full object-cover">
+                    </div>
+                    
+                    <ul class="text-gray-300 space-y-4 mb-8 flex-grow">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check text-proYellow mt-1 mr-3 text-lg"></i> 
+                            <span>Diseñada especialmente para la familia <strong>Pioneer XDJ-RX, XDJ-RX2 y XDJ-RX3</strong>.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check text-proYellow mt-1 mr-3 text-lg"></i> 
+                            <span>Lista para despachar. Sin tiempos de espera de fabricación.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check text-proYellow mt-1 mr-3 text-lg"></i> 
+                            <span>Acabado profesional clásico.</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="mb-6">
+                        <span class="text-4xl font-extrabold text-white">$500.000</span>
+                        <span class="text-gray-400 font-medium ml-1">COP</span>
+                    </div>
+                    
+                    <a href="https://wa.me/573150052636?text=Hola%20Proforrox,%20quiero%20comprar%20la%20maleta%20estándar%20de%20entrega%20inmediata%20por%20$500.000" target="_blank" class="w-full block text-center bg-proYellow text-proDark font-bold py-4 rounded-lg hover:bg-white transition duration-300 text-lg">
+                        Comprar para Entrega Inmediata
+                    </a>
+                </div>
+
+                <!-- OPCIÓN B: PERSONALIZADA A LA MEDIDA -->
+                <div class="bg-proGray p-8 rounded-2xl border border-gray-700 hover:border-proYellow transition-colors duration-300 flex flex-col">
+                    <h3 class="text-2xl font-bold mb-2 text-white">Personalizada a la Medida</h3>
+                    <p class="text-gray-400 text-lg mb-4">Fabricación exclusiva bajo pedido</p>
+                    
+                    <div class="mb-6 rounded-lg overflow-hidden border border-gray-700">
+                        <img src="bordados.jpg" alt="Bordados personalizados en maletas Proforrox" class="w-full object-cover">
+                    </div>
+                    
+                    <ul class="text-gray-300 space-y-3 mb-8 flex-grow text-sm">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check text-proYellow mt-1 mr-3 text-lg"></i> 
+                            <span>Abono inicial mínimo de <strong>$50.000 COP</strong> para confirmar tu pedido.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-clock text-proYellow mt-1 mr-3 text-lg"></i> 
+                            <span>Lista en <strong>10 días hábiles</strong>. Te enviamos fotos y videos antes del envío.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-truck text-proYellow mt-1 mr-3 text-lg"></i> 
+                            <span>Pago del saldo <strong>Contraentrega + envío</strong>. (En Bogotá: Recogida en taller o Domiciliario).</span>
+                        </li>
+                    </ul>
+                    
+                    <a href="https://wa.me/573150052636?text=Hola%20Proforrox,%20quiero%20cotizar%20una%20maleta%20personalizada%20con%20bordado%20para%20mi%20equipo." target="_blank" class="w-full block text-center bg-transparent border-2 border-proYellow text-proYellow font-bold py-4 rounded-lg hover:bg-proYellow hover:text-proDark transition duration-300 text-lg mt-auto">
+                        Cotizar mi Maleta Personalizada
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. CARACTERÍSTICAS (Basado en el PDF) -->
+    <section id="beneficios" class="py-20 bg-proGray border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <div class="inline-block bg-proYellow text-proDark font-bold px-6 py-2 rounded-full mb-4 text-sm tracking-wider uppercase shadow-[0_0_10px_rgba(246,178,56,0.6)]">
+                    <i class="fa-solid fa-certificate mr-2"></i> 6 meses de Garantía
+                </div>
+                <h2 class="text-3xl font-extrabold text-white sm:text-4xl">Ingeniería para el transporte seguro</h2>
+            </div>
+
+            <!-- Lista de Características Generales -->
+            <div class="bg-proDark p-8 rounded-2xl border border-gray-800 mb-12 max-w-4xl mx-auto shadow-lg">
+                <h3 class="text-xl font-bold text-proYellow mb-6 text-center">Materiales y confección de primera</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-300">
+                    <div class="flex items-center"><i class="fa-solid fa-droplet text-proYellow mr-3 w-5"></i> Lona impermeable exterior</div>
+                    <div class="flex items-center"><i class="fa-solid fa-layer-group text-proYellow mr-3 w-5"></i> Espuma troquelada (Jumbolom) interna</div>
+                    <div class="flex items-center"><i class="fa-solid fa-shield text-proYellow mr-3 w-5"></i> Cuerpo Semi-rígido (protege golpes y vibraciones)</div>
+                    <div class="flex items-center"><i class="fa-solid fa-briefcase text-proYellow mr-3 w-5"></i> Dos bolsillos principales de alta capacidad</div>
+                    <div class="flex items-center"><i class="fa-solid fa-sd-card text-proYellow mr-3 w-5"></i> Bolsillo dedicado para memorias</div>
+                    <div class="flex items-center"><i class="fa-solid fa-laptop text-proYellow mr-3 w-5"></i> Compartimiento seguro para PC</div>
+                    <div class="flex items-center"><i class="fa-solid fa-backpack text-proYellow mr-3 w-5"></i> Correas acolchadas tipo mochila</div>
+                    <div class="flex items-center"><i class="fa-solid fa-ruler-combined text-proYellow mr-3 w-5"></i> Fabricada exactamente a la medida</div>
+                    <div class="flex items-center md:col-span-2"><i class="fa-solid fa-pen-nib text-proYellow mr-3 w-5"></i> Logotipos personalizados bordados</div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Característica 1 -->
+                <div class="text-center bg-proDark rounded-xl border border-gray-800 hover:border-proYellow transition-colors group overflow-hidden flex flex-col">
+                    <img src="interior.png" alt="Protección ante impactos" class="w-full h-56 object-cover bg-white group-hover:scale-105 transition-transform duration-500">
+                    <div class="p-6 flex-grow flex flex-col justify-center">
+                        <h3 class="text-xl font-bold mb-3 text-white">Protección ante impactos</h3>
+                        <p class="text-gray-400 text-sm">Espumas protectoras hechas a medida. Amortiguan golpes y evitan rayones en tu equipo.</p>
+                    </div>
+                </div>
+
+                <!-- Característica 2 -->
+                <div class="text-center bg-proDark rounded-xl border border-gray-800 hover:border-proYellow transition-colors group overflow-hidden flex flex-col">
+                    <img src="manijas.png" alt="Comodidad y transporte" class="w-full h-56 object-cover bg-white group-hover:scale-105 transition-transform duration-500">
+                    <div class="p-6 flex-grow flex flex-col justify-center">
+                        <h3 class="text-xl font-bold mb-3 text-white">Comodidad y transporte</h3>
+                        <p class="text-gray-400 text-sm">Manijas reforzadas diseñadas para soportar el peso de tus equipos sin lastimar tus manos.</p>
+                    </div>
+                </div>
+
+                <!-- Característica 3 -->
+                <div class="text-center bg-proDark rounded-xl border border-gray-800 hover:border-proYellow transition-colors group overflow-hidden flex flex-col">
+                    <img src="bolsillos.png" alt="Bolsillos organizadores" class="w-full h-56 object-cover bg-white group-hover:scale-105 transition-transform duration-500">
+                    <div class="p-6 flex-grow flex flex-col justify-center">
+                        <h3 class="text-xl font-bold mb-3 text-white">Bolsillos organizadores</h3>
+                        <p class="text-gray-400 text-sm">Bolsillos para PC y cables adicionales hechos a medida. Tu setup completo en un solo lugar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. ENVÍOS Y MÉTODOS DE PAGO -->
+    <section id="envios" class="py-20 bg-proDark border-t border-gray-800">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-extrabold text-white text-center mb-12">Logística y Pagos</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Envíos -->
+                <div class="bg-proGray p-8 rounded-2xl border border-gray-800 flex flex-col items-center text-center">
+                    <i class="fa-solid fa-truck-fast text-5xl text-proYellow mb-6"></i>
+                    <h3 class="text-xl font-bold text-white mb-4">Envíos a todo Colombia</h3>
+                    <p class="text-gray-400 mb-6 text-sm">Despachos seguros y rápidos a nivel nacional apoyados en las mejores transportadoras, además de opciones locales.</p>
+                    <div class="flex flex-wrap justify-center gap-3">
+                        <span class="bg-proDark px-4 py-2 rounded border border-gray-700 text-sm font-semibold">Servientrega</span>
+                        <span class="bg-proDark px-4 py-2 rounded border border-gray-700 text-sm font-semibold">Inter Rapidísimo</span>
+                        <span class="bg-proDark px-4 py-2 rounded border border-proYellow text-proYellow text-sm font-bold">Mensajero en Bogotá D.C.</span>
+                    </div>
+                </div>
+
+                <!-- Pagos -->
+                <div class="bg-proGray p-8 rounded-2xl border border-gray-800 flex flex-col items-center text-center">
+                    <i class="fa-solid fa-wallet text-5xl text-proYellow mb-6"></i>
+                    <h3 class="text-xl font-bold text-white mb-4">Métodos de Pago Seguros</h3>
+                    <p class="text-gray-400 mb-6 text-sm">Ofrecemos múltiples facilidades de pago para que adquieras tu maleta sin complicaciones.</p>
+                    <div class="flex flex-wrap justify-center gap-3 mb-4">
+                        <span class="bg-[#391054] text-white px-4 py-2 rounded text-sm font-bold">Nequi</span>
+                        <span class="bg-[#ED1C24] text-white px-4 py-2 rounded text-sm font-bold">Daviplata</span>
+                        <span class="bg-[#FDDA24] text-black px-4 py-2 rounded text-sm font-bold">Bancolombia</span>
+                    </div>
+                    <div class="w-full bg-proDark p-3 rounded border border-gray-700 mt-2">
+                        <p class="text-sm text-gray-300">
+                            <i class="fa-solid fa-money-bill-transfer text-proYellow mr-2"></i>
+                            Opción de <strong>Contra-Entrega</strong> solo por <span class="italic">Inter Rapidísimo</span>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. FOOTER CUMPLIMIENTO META ADS -->
+    <footer class="bg-[#000000] pt-16 pb-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <!-- Marca -->
+                <div class="col-span-1 md:col-span-1">
+                    <a href="#" class="text-2xl font-extrabold tracking-tighter text-white uppercase mb-4 block">
+                        PRO<span class="text-proYellow">FORROX</span>
+                    </a>
+                    <p class="text-gray-500 text-sm mb-4">
+                        Protegido | Práctico. Especialistas en maletas para DJs y equipo de audio profesional.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-proYellow transition-colors"><i class="fa-brands fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-proYellow transition-colors"><i class="fa-brands fa-facebook text-xl"></i></a>
+                    </div>
+                </div>
+
+                <!-- Enlaces Rápidos -->
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Navegación</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-proYellow text-sm transition">Inicio</a></li>
+                        <li><a href="#opciones" class="text-gray-400 hover:text-proYellow text-sm transition">Modelos y Precios</a></li>
+                        <li><a href="#beneficios" class="text-gray-400 hover:text-proYellow text-sm transition">Características</a></li>
+                    </ul>
+                </div>
+
+                <!-- Políticas (Requerido por Meta) -->
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><button onclick="openModal('modal-privacidad')" class="text-gray-400 hover:text-proYellow text-sm transition text-left">Política de Privacidad</button></li>
+                        <li><button onclick="openModal('modal-terminos')" class="text-gray-400 hover:text-proYellow text-sm transition text-left">Términos y Condiciones</button></li>
+                        <li><button onclick="openModal('modal-devoluciones')" class="text-gray-400
