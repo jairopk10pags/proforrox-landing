@@ -519,6 +519,9 @@
         function enviarWhatsApp(event) {
             event.preventDefault(); // Evita recargar la página
 
+            // ---> NUEVA LÍNEA: Dispara el evento de COMPRA en Meta <---
+            fbq('track', 'Purchase', {content_name: 'Maleta Estándar', value: 500000, currency: 'COP'});
+
             const nombre = document.getElementById('form-nombre').value;
             const departamento = document.getElementById('form-dep').value;
             const ciudad = document.getElementById('form-ciudad').value;
