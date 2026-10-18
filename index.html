@@ -6,6 +6,24 @@
     <title>Proforrox | Maletas y Cases Profesionales para DJs</title>
     <meta name="description" content="Maletas rígidas a la medida para equipos de audio y DJ. Máxima protección, entrega inmediata o personalización a medida.">
     
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1051167890033257');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1051167890033257&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -68,6 +86,16 @@
         .modal.active {
             display: flex;
         }
+
+        /* Animación para el botón de WhatsApp en el formulario */
+        @keyframes latido {
+            0% { transform: scale(1); box-shadow: 0 0 15px rgba(37,211,102,0.4); }
+            50% { transform: scale(1.03); box-shadow: 0 0 25px rgba(37,211,102,0.8); }
+            100% { transform: scale(1); box-shadow: 0 0 15px rgba(37,211,102,0.4); }
+        }
+        .btn-latido {
+            animation: latido 1.8s infinite ease-in-out;
+        }
     </style>
 </head>
 <body class="antialiased font-sans flex flex-col min-h-screen relative">
@@ -97,7 +125,6 @@
         <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-proYellow opacity-5 rounded-full blur-3xl pointer-events-none"></div>
         
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center">
-            <!-- Textos -->
             <div class="text-center lg:text-left lg:w-1/2 lg:pr-10 z-10">
                 <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
                     Tu equipo es tu inversión más grande; <br>
@@ -113,7 +140,6 @@
                 </div>
             </div>
             
-            <!-- Imagen Hero -->
             <div class="mt-16 lg:mt-0 lg:w-1/2 relative z-10 flex justify-center">
                 <div class="relative rounded-2xl overflow-hidden yellow-box group border border-proYellow/30 max-w-md w-full bg-white">
                     <img src="portada.png" alt="Maleta Proforrox protegiendo controlador" class="w-full object-contain transform transition-transform duration-700 group-hover:scale-105">
@@ -122,7 +148,7 @@
         </div>
     </header>
 
-    <!-- 1.5. SECCIÓN DE DOLOR / INTERÉS (NUEVA) -->
+    <!-- 1.5. SECCIÓN DE DOLOR / INTERÉS -->
     <section class="py-16 bg-[#0a0a0a] border-t border-gray-800 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center max-w-3xl mx-auto mb-16">
@@ -135,7 +161,6 @@
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <!-- Problema 1 -->
                 <div class="bg-proGray p-8 rounded-2xl border border-gray-800 text-center hover:border-proDanger transition-colors duration-300">
                     <div class="w-16 h-16 bg-red-900/30 rounded-full flex items-center justify-center mx-auto mb-6">
                         <i class="fa-solid fa-car-burst text-2xl text-proDanger"></i>
@@ -146,7 +171,6 @@
                     </p>
                 </div>
                 
-                <!-- Problema 2 -->
                 <div class="bg-proGray p-8 rounded-2xl border border-gray-800 text-center hover:border-proDanger transition-colors duration-300">
                     <div class="w-16 h-16 bg-red-900/30 rounded-full flex items-center justify-center mx-auto mb-6">
                         <i class="fa-solid fa-cloud-showers-heavy text-2xl text-proDanger"></i>
@@ -157,7 +181,6 @@
                     </p>
                 </div>
                 
-                <!-- Problema 3 -->
                 <div class="bg-proGray p-8 rounded-2xl border border-gray-800 text-center hover:border-proDanger transition-colors duration-300">
                     <div class="w-16 h-16 bg-red-900/30 rounded-full flex items-center justify-center mx-auto mb-6">
                         <i class="fa-solid fa-sliders text-2xl text-proDanger"></i>
@@ -197,7 +220,6 @@
                     <h3 class="text-2xl font-bold mb-2 text-proYellow">Entrega Inmediata</h3>
                     <p class="text-white text-lg font-semibold mb-6">Maleta Estándar (73 cm x 49 cm x 13 cm)</p>
                     
-                    <!-- IMAGEN AÑADIDA: estandar.jpg -->
                     <div class="mb-6 rounded-lg overflow-hidden border border-gray-700">
                         <img src="estandar.jpg" alt="Maleta Estándar de Entrega Inmediata" class="w-full object-cover">
                     </div>
@@ -222,9 +244,10 @@
                         <span class="text-gray-400 font-medium ml-1">COP</span>
                     </div>
                     
-                    <a href="https://wa.me/573150052636?text=Hola%20Proforrox,%20quiero%20comprar%20la%20maleta%20estándar%20de%20entrega%20inmediata%20por%20$500.000" target="_blank" class="w-full block text-center bg-proYellow text-proDark font-bold py-4 rounded-lg hover:bg-white transition duration-300 text-lg">
+                    <!-- BOTÓN QUE ABRE EL FORMULARIO Y REGISTRA EL PIXEL -->
+                    <button onclick="abrirFormularioCompra()" class="w-full block text-center bg-proYellow text-proDark font-bold py-4 rounded-lg hover:bg-white transition duration-300 text-lg">
                         Comprar para Entrega Inmediata
-                    </a>
+                    </button>
                 </div>
 
                 <!-- OPCIÓN B: PERSONALIZADA A LA MEDIDA -->
@@ -251,7 +274,7 @@
                         </li>
                     </ul>
                     
-                    <a href="https://wa.me/573150052636?text=Hola%20Proforrox,%20quiero%20cotizar%20una%20maleta%20personalizada%20con%20bordado%20para%20mi%20equipo." target="_blank" class="w-full block text-center bg-transparent border-2 border-proYellow text-proYellow font-bold py-4 rounded-lg hover:bg-proYellow hover:text-proDark transition duration-300 text-lg mt-auto">
+                    <a href="https://wa.me/573150052636?text=Hola%20Proforrox,%20quiero%20cotizar%20una%20maleta%20personalizada%20con%20bordado%20para%20mi%20equipo." onclick="fbq('track', 'Lead', {content_name: 'Cotización Maleta Personalizada'});" target="_blank" class="w-full block text-center bg-transparent border-2 border-proYellow text-proYellow font-bold py-4 rounded-lg hover:bg-proYellow hover:text-proDark transition duration-300 text-lg mt-auto">
                         Cotizar mi Maleta Personalizada
                     </a>
                 </div>
@@ -260,7 +283,7 @@
         </div>
     </section>
 
-    <!-- 3. CARACTERÍSTICAS (Basado en el PDF) -->
+    <!-- 3. CARACTERÍSTICAS -->
     <section id="beneficios" class="py-20 bg-proGray border-t border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
@@ -270,7 +293,6 @@
                 <h2 class="text-3xl font-extrabold text-white sm:text-4xl">Ingeniería para el transporte seguro</h2>
             </div>
 
-            <!-- Lista de Características Generales -->
             <div class="bg-proDark p-8 rounded-2xl border border-gray-800 mb-12 max-w-4xl mx-auto shadow-lg">
                 <h3 class="text-xl font-bold text-proYellow mb-6 text-center">Materiales y confección de primera</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-300">
@@ -287,7 +309,6 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                <!-- Característica 1 -->
                 <div class="text-center bg-proDark rounded-xl border border-gray-800 hover:border-proYellow transition-colors group overflow-hidden flex flex-col">
                     <img src="interior.png" alt="Protección ante impactos" class="w-full h-56 object-cover bg-white group-hover:scale-105 transition-transform duration-500">
                     <div class="p-6 flex-grow flex flex-col justify-center">
@@ -296,7 +317,6 @@
                     </div>
                 </div>
 
-                <!-- Característica 2 -->
                 <div class="text-center bg-proDark rounded-xl border border-gray-800 hover:border-proYellow transition-colors group overflow-hidden flex flex-col">
                     <img src="manijas.png" alt="Comodidad y transporte" class="w-full h-56 object-cover bg-white group-hover:scale-105 transition-transform duration-500">
                     <div class="p-6 flex-grow flex flex-col justify-center">
@@ -305,7 +325,6 @@
                     </div>
                 </div>
 
-                <!-- Característica 3 -->
                 <div class="text-center bg-proDark rounded-xl border border-gray-800 hover:border-proYellow transition-colors group overflow-hidden flex flex-col">
                     <img src="bolsillos.png" alt="Bolsillos organizadores" class="w-full h-56 object-cover bg-white group-hover:scale-105 transition-transform duration-500">
                     <div class="p-6 flex-grow flex flex-col justify-center">
@@ -323,7 +342,6 @@
             <h2 class="text-3xl font-extrabold text-white text-center mb-12">Logística y Pagos</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Envíos -->
                 <div class="bg-proGray p-8 rounded-2xl border border-gray-800 flex flex-col items-center text-center">
                     <i class="fa-solid fa-truck-fast text-5xl text-proYellow mb-6"></i>
                     <h3 class="text-xl font-bold text-white mb-4">Envíos a todo Colombia</h3>
@@ -335,7 +353,6 @@
                     </div>
                 </div>
 
-                <!-- Pagos -->
                 <div class="bg-proGray p-8 rounded-2xl border border-gray-800 flex flex-col items-center text-center">
                     <i class="fa-solid fa-wallet text-5xl text-proYellow mb-6"></i>
                     <h3 class="text-xl font-bold text-white mb-4">Métodos de Pago Seguros</h3>
@@ -360,7 +377,6 @@
     <footer class="bg-[#000000] pt-16 pb-8 border-t border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-                <!-- Marca -->
                 <div class="col-span-1 md:col-span-1">
                     <a href="#" class="text-2xl font-extrabold tracking-tighter text-white uppercase mb-4 block">
                         PRO<span class="text-proYellow">FORROX</span>
@@ -368,13 +384,8 @@
                     <p class="text-gray-500 text-sm mb-4">
                         Protegido | Práctico. Especialistas en maletas para DJs y equipo de audio profesional.
                     </p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-proYellow transition-colors"><i class="fa-brands fa-instagram text-xl"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-proYellow transition-colors"><i class="fa-brands fa-facebook text-xl"></i></a>
-                    </div>
                 </div>
 
-                <!-- Enlaces Rápidos -->
                 <div>
                     <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Navegación</h4>
                     <ul class="space-y-2">
@@ -384,10 +395,163 @@
                     </ul>
                 </div>
 
-                <!-- Políticas (Requerido por Meta) -->
                 <div>
                     <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Legal</h4>
                     <ul class="space-y-2">
                         <li><button onclick="openModal('modal-privacidad')" class="text-gray-400 hover:text-proYellow text-sm transition text-left">Política de Privacidad</button></li>
                         <li><button onclick="openModal('modal-terminos')" class="text-gray-400 hover:text-proYellow text-sm transition text-left">Términos y Condiciones</button></li>
-                        <li><button onclick="openModal('modal-devoluciones')" class="text-gray-400
+                        <li><button onclick="openModal('modal-devoluciones')" class="text-gray-400 hover:text-proYellow text-sm transition text-left">Políticas de Reembolso</button></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Contacto</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li class="flex items-start"><i class="fa-solid fa-location-dot mt-1 mr-3 text-proYellow"></i> Bogotá D.C., Colombia</li>
+                        <li class="flex items-center"><i class="fa-solid fa-envelope mr-3 text-proYellow"></i> proforrox@gmail.com</li>
+                        <li class="flex items-center"><i class="fa-brands fa-whatsapp mr-3 text-proYellow"></i> +57 315 005 2636</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-600 text-xs text-center md:text-left mb-4 md:mb-0">
+                    &copy; 2026 Proforrox. Todos los derechos reservados. Este sitio no es parte del sitio web de Facebook Inc. o Meta Inc. Adicionalmente, este sitio NO está respaldado por Facebook de ninguna manera. FACEBOOK es una marca registrada de FACEBOOK, Inc.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 6. BOTÓN FLOTANTE DE WHATSAPP -->
+    <a href="https://wa.me/573150052636?text=Hola%20Proforrox,%20necesito%20información%20sobre%20las%20maletas." onclick="fbq('track', 'Contact');" target="_blank" 
+       class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center shadow-[0_0_15px_rgba(37,211,102,0.5)] hover:scale-110 hover:shadow-[0_0_25px_rgba(37,211,102,0.8)] transition-all duration-300">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
+
+    <!-- FORMULARIO DE COMPRA (NUEVO MODAL) -->
+    <div id="modal-compra" class="modal fixed inset-0 z-[100] bg-black bg-opacity-90 items-center justify-center p-4">
+        <div class="bg-proGray border border-proYellow w-full max-w-md rounded-xl p-6 md:p-8 relative">
+            <button onclick="closeModal('modal-compra')" class="absolute top-4 right-4 text-gray-400 hover:text-proYellow"><i class="fa-solid fa-xmark text-2xl"></i></button>
+            <h2 class="text-2xl font-bold text-proYellow mb-2">Finaliza tu compra</h2>
+            <p class="text-xs text-gray-400 mb-4">*Estos datos serán utilizados para agilizar el proceso de compra y despacho del producto.</p>
+
+            <form id="checkout-form" onsubmit="enviarWhatsApp(event)">
+                <div class="space-y-4 mb-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-1">Nombre completo</label>
+                        <input type="text" id="form-nombre" required class="w-full bg-proDark border border-gray-700 rounded px-3 py-2 text-white focus:outline-none focus:border-proYellow">
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-1">Departamento</label>
+                            <input type="text" id="form-dep" required class="w-full bg-proDark border border-gray-700 rounded px-3 py-2 text-white focus:outline-none focus:border-proYellow">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-1">Ciudad</label>
+                            <input type="text" id="form-ciudad" required class="w-full bg-proDark border border-gray-700 rounded px-3 py-2 text-white focus:outline-none focus:border-proYellow">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-1">Referencia del equipo o controladora</label>
+                        <input type="text" id="form-equipo" required placeholder="Ej. Pioneer XDJ-RX3" class="w-full bg-proDark border border-gray-700 rounded px-3 py-2 text-white focus:outline-none focus:border-proYellow">
+                    </div>
+                </div>
+
+                <div class="bg-proDark p-3 rounded border border-gray-800 mb-6 text-sm">
+                    <p class="text-gray-300"><i class="fa-solid fa-motorcycle text-proYellow mr-2"></i> Envíos a Bogotá: <strong class="text-white">1 día hábil</strong>.</p>
+                    <p class="text-gray-300 mt-1"><i class="fa-solid fa-truck text-proYellow mr-2"></i> Envíos fuera de Bogotá: <strong class="text-white">de 2 a 3 días hábiles</strong>.</p>
+                </div>
+
+                <button type="submit" class="w-full block text-center bg-[#25D366] text-white font-bold py-4 rounded-lg transition duration-300 text-lg btn-latido">
+                    <i class="fa-brands fa-whatsapp mr-2"></i> Terminar compra en WhatsApp
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- MODALES DE POLÍTICAS -->
+    <div id="modal-privacidad" class="modal fixed inset-0 z-[100] bg-black bg-opacity-90 items-center justify-center p-4">
+        <div class="bg-proGray border border-gray-700 w-full max-w-2xl rounded-xl p-6 md:p-8 max-h-[80vh] overflow-y-auto relative">
+            <button onclick="closeModal('modal-privacidad')" class="absolute top-4 right-4 text-gray-400 hover:text-proYellow"><i class="fa-solid fa-xmark text-2xl"></i></button>
+            <h2 class="text-2xl font-bold text-proYellow mb-4">Política de Privacidad</h2>
+            <div class="text-gray-300 text-sm space-y-4">
+                <p>En Proforrox, accesible desde nuestro sitio web, una de nuestras principales prioridades es la privacidad de nuestros visitantes.</p>
+                <p><strong>Uso de la Información:</strong> Utilizamos la información que recopilamos para procesar sus pedidos, personalizar la atención de soporte, coordinar envíos nacionales y comunicarnos vía WhatsApp para detalles de su maleta personalizada o compras de stock.</p>
+            </div>
+            <button onclick="closeModal('modal-privacidad')" class="mt-8 w-full bg-proYellow text-proDark font-bold py-3 rounded">Cerrar</button>
+        </div>
+    </div>
+
+    <div id="modal-terminos" class="modal fixed inset-0 z-[100] bg-black bg-opacity-90 items-center justify-center p-4">
+        <div class="bg-proGray border border-gray-700 w-full max-w-2xl rounded-xl p-6 md:p-8 max-h-[80vh] overflow-y-auto relative">
+            <button onclick="closeModal('modal-terminos')" class="absolute top-4 right-4 text-gray-400 hover:text-proYellow"><i class="fa-solid fa-xmark text-2xl"></i></button>
+            <h2 class="text-2xl font-bold text-proYellow mb-4">Términos y Condiciones</h2>
+            <div class="text-gray-300 text-sm space-y-4">
+                <p>¡Bienvenido a Proforrox!</p>
+                <p><strong>Condiciones de Compra:</strong> Las maletas de "Entrega Inmediata" están sujetas a disponibilidad de inventario. Las maletas "Personalizadas a la medida" requieren un pago previo (parcial o total, según acuerdo por WhatsApp) y un tiempo de fabricación que será notificado al cliente.</p>
+                <p>Los envíos se realizan por Servientrega o Inter Rapidísimo y el cliente asume los costos de flete según la modalidad acordada.</p>
+            </div>
+            <button onclick="closeModal('modal-terminos')" class="mt-8 w-full bg-proYellow text-proDark font-bold py-3 rounded">Cerrar</button>
+        </div>
+    </div>
+
+    <div id="modal-devoluciones" class="modal fixed inset-0 z-[100] bg-black bg-opacity-90 items-center justify-center p-4">
+        <div class="bg-proGray border border-gray-700 w-full max-w-2xl rounded-xl p-6 md:p-8 max-h-[80vh] overflow-y-auto relative">
+            <button onclick="closeModal('modal-devoluciones')" class="absolute top-4 right-4 text-gray-400 hover:text-proYellow"><i class="fa-solid fa-xmark text-2xl"></i></button>
+            <h2 class="text-2xl font-bold text-proYellow mb-4">Políticas de Reembolso</h2>
+            <div class="text-gray-300 text-sm space-y-4">
+                <p>Debido a la naturaleza de nuestro trabajo (maletas fabricadas a la medida y personalizadas con bordados), <strong>no se aceptan devoluciones o reembolsos por arrepentimiento de compra.</strong></p>
+                <p>Las garantías y devoluciones solo aplican en los siguientes casos: defectos evidentes de fabricación en costuras o cierres reportados al momento de recibir el producto, o si las medidas de la maleta entregada no coinciden con las especificaciones del controlador solicitado.</p>
+            </div>
+            <button onclick="closeModal('modal-devoluciones')" class="mt-8 w-full bg-proYellow text-proDark font-bold py-3 rounded">Cerrar</button>
+        </div>
+    </div>
+
+    <!-- Scripts Logicos y de Modales -->
+    <script>
+        // Función que registra el inicio de pago y abre el formulario
+        function abrirFormularioCompra() {
+            fbq('track', 'InitiateCheckout', {content_name: 'Maleta Estándar', value: 500000, currency: 'COP'});
+            openModal('modal-compra');
+        }
+
+        // Función que compila los datos del form y te envía el mensaje al WhatsApp
+        function enviarWhatsApp(event) {
+            event.preventDefault(); // Evita recargar la página
+
+            const nombre = document.getElementById('form-nombre').value;
+            const departamento = document.getElementById('form-dep').value;
+            const ciudad = document.getElementById('form-ciudad').value;
+            const equipo = document.getElementById('form-equipo').value;
+
+            const mensaje = `Hola Proforrox, quiero comprar la maleta estándar de entrega inmediata por $500.000 COP.%0A%0A*Mis datos de envío son:*%0A- Nombre: ${nombre}%0A- Departamento: ${departamento}%0A- Ciudad: ${ciudad}%0A- Equipo: ${equipo}`;
+
+            const url = `https://wa.me/573150052636?text=${mensaje}`;
+
+            // Abre WhatsApp y cierra la ventana emergente
+            window.open(url, '_blank');
+            closeModal('modal-compra');
+            
+            // Limpia el formulario para la próxima vez
+            document.getElementById('checkout-form').reset();
+        }
+
+        function openModal(id) {
+            document.getElementById(id).classList.add('active');
+            document.body.style.overflow = 'hidden'; 
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).classList.remove('active');
+            document.body.style.overflow = 'auto'; 
+        }
+
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        }
+    </script>
+</body>
+</html>
